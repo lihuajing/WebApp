@@ -1,0 +1,161 @@
+<!-- 首先定义文档模式 -->
+<!-- 以前有HTML 4.0.1/XHTML 1.0等等,现在统一用HTML5即可-->
+<!-- HTML5 -->
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <title>WebApp</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+</head>
+<body>
+
+<!-- 没有JS时的提示文案可以放到noscript标签中 -->
+<noscript>
+    <p>页面需要浏览器支持(启用)JavaScript!</p>
+</noscript>
+
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">WebApp</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>'Allo, 'Allo!</h1>
+
+        <p class="lead">Always a pleasure scaffolding your apps.</p>
+
+        <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
+    </div>
+
+    <div class="row marketing">
+        <div class="col-lg-6">
+            <h4><a href="https://html5boilerplate.com/">HTML5 Boilerplate</a></h4>
+
+            <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps
+                or sites.</p>
+
+            <h4><a href="http://libsass.org/">Sass</a></h4>
+
+            <p>Sass is a mature, stable, and powerful professional grade CSS extension language.</p>
+
+
+            <h4><a href="http://getbootstrap.com/">Bootstrap</a></h4>
+
+            <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web
+                development.</p>
+
+            <h4><a href="http://modernizr.com/">Modernizr</a></h4>
+
+            <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and
+                CSS3-powered websites.</p>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+    </div>
+</div>
+
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/bower_components/modernizr/modernizr.js"></script>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+
+<!-- build:js(.) scripts/plugins.js -->
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+                function () {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<script async="async" chartset="utf-8" defer="defer" language="JavaScript1.5" src="" type="text/javascript">
+    // 基础概念
+    // window.onload事件是在页面加载完成,包括资源全部加载完成后触发
+    // DOMContentLoaded是在DOM树解析完成并且静态JS执行完毕后触发(由于静态JS可能会修改DOM,所以在静态JS执行后触发),本身不会等待CSS/img/iframe加载
+    // 静态JS可能依赖于在它前面引入的CSS所计算出来的结果,img等也可能依赖CSS(设定img样式)和JS(操作img),chrome中JS不会阻塞img加载
+    //    (1) 解析HTML结构。
+    //    (2) 加载外部脚本和样式表文件。
+    //    (3) 解析并执行脚本代码。
+    //    (4) 构造HTML DOM模型。ready / DOMContentLoaded
+    //    (5) 加载图片等外部文件。
+    //    (6) 页面加载完毕。load / window.onload
+
+    // JS的引入/执行/标签属性
+    // HTML中文件的引入是按照顺序由上至下进行下载和解析的,既可以在head中引入也可以在body中引入,既要考虑用户体验也要考虑引用顺序
+    // HTML的Script标签:既有外部文件又有内嵌代码时,只会执行外部文件
+    // async:异步下载外部script文件,在页面load事件之前执行,并且执行顺序未知,可能在DOMContentLoaded之前或之后执行,异步脚本要避免在加载期间修改DOM
+    // chartset:外部script文件的字符集
+    // defer:外部script延迟到文档完全解析和显示后执行(立即下载,延迟执行,延迟到遇到</html>标签后执行)
+    // H5规定延迟脚本也需要按照顺序执行并且在DOMContentLoaded事件之前执行,实际上不一定是这样的,所以还是把延迟脚本放到body最后面吧
+    // language:指定脚本语言类型,如javascript1.2/JScript/VBScript
+    // src:外部文件地址,允许跨域,代码有风险,跨域需谨慎
+    // type:指定脚本语言内容类型(MIME类型),如application/javascript
+    // 一般情况下下载和解析外部script文件是同步的,即页面处理会被阻塞而停止,现代浏览器会并发预加载CSS/JS,但是执行顺序还是按照传统的由上而下
+    // js文件的扩展名.js不是必须的,因此可以使用JSP和PHP等动态生成,但是服务器需要知道MIME类型来解析文件
+</script>
+
+</body>
+</html>
